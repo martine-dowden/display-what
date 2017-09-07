@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>.css { display: what? }</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500" rel="stylesheet">
+  <link href="./styles.css" type="text/css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./favicon.png" />
+
+  <meta name="description" content="CSS Display Property Presentation">
+  <meta name="keywords" content="HTML,CSS">
+  <meta name="author" content="Martine Dowden">
+</head>
+
+<body>
+  <nav>
+    <a href="/" title="home" class="home"><img src="./img/home.svg" alt=""></a>
+    <a href="/pages/nav" title="more about display table"><img src="./img/table.svg" alt=""></a>
+  </nav>
+  <div class="main-content">
+    <h1>.css { display: what? }</h1>
+    <label> Select a display property value
+      <select id="styleSelect" onchange="changeStyle(value)">
+        <optgroup label="Display Outside">
+          <option value="block" selected>Block</option>
+          <option value="inline">Inline</option>
+        </optgroup>
+        <optgroup label="Display Inside">
+            <option value="table">Table</option>
+            <option value="flex">Flex</option>
+            <option value="grid">Grid</option>
+        </optgroup>
+        <optgroup label="Display Box">
+          <option value="none">None</option>
+        </optgroup>
+        <optgroup label="Display Legacy">
+            <option value="inlineBlock">Inline-Block</option>
+            <option value="table">Inline-Table</option>
+            <option value="flex">Inline-Flex</option>
+            <option value="grid">Inline-Grid</option>
+        </optgroup>
+        <optgroup label="Global">
+            <option value="inherit">Inherit</option>
+            <option value="unset">Unset</option>
+            <option value="initial">Initial</option>
+        </optgroup>
+        <optgroup label="Experimental">
+          <option value="runin">Run-in</option>
+          <option value="flow">Flow-root</option>
+          <option value="contents">Contents</option>
+        </optgroup>
+      <select>
+    </label>
+    <main>
+      <section class="example" id="example">
+        <h2 id="title"></h2>
+        <div class="first">
+          <h3>First</h3>
+          <p>div 1</p>
+        </div>
+        <div class="second">
+          <h3>Second</h3>
+          <p>div 2</p>
+        </div>
+        <div class="third">
+          <h3>Third</h3>
+          <p>div 3</p>
+        </div>
+        <div class="fourth">
+          <h3>Fourth</h3>
+          <p>div 4</p>
+        </div>
+        <div class="fifth">
+          <h3>Fifth</h3>
+          <p>div 5</p>
+        </div>
+        <div class="sixth">
+          <h3>Sixth</h3>
+          <p>div 6</p>
+        </div>
+        <div class="seventh">
+          <h3>Seventh</h3>
+          <p>div 7</p>
+        </div>
+        <div class="eighth">
+          <h3>Eighth</h3>
+          <p>div 8</p>
+        </div>
+
+        <div class="experimental">
+          <h3>Support</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th><th>Chrome</th><th>Edge</th><th>Firefox (Gecko)</th><th>Internet Explorer</th><th>Opera</th><th>Safari (WebKit)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="run-in"><td>run-in</td><td>Removed in 32</td><td>(Yes)</td><td>No Support</td><td>8.0</td><td>7.0</td><td>Removed in 8.0</td></tr>
+              <tr class="flow-root"><td>flow-root</td><td>58</td><td>?</td><td>53.0</td><td>?</td><td>45</td><td>?</td></tr>
+              <tr class="contents"><td>contents</td><td>58 (with experimental feature flag)</td><td>No Support</td><td>37</td><td>No Support</td><td>No Support</td><td>No Support</td></tr>            
+            </tbody>
+          </table>
+        </div>
+
+      </section>
+
+      <section class="code">
+        <h2>Code</h2>
+        <iframe id="iframe" src=""></iframe>
+      </section>
+
+    </main>
+  </div>
+  <footer>
+    <span>Copyright &copy; M<sub>2</sub>D<sub>2</sub> LLC</span>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+  </footer>
+  
+  <script src="./scripts.js"></script>
+</body>
+
+</html>

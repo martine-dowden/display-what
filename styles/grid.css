@@ -1,0 +1,50 @@
+/* display:inline-grid makes the container act as an inline element */
+
+.grid {
+  display: grid;
+  grid-template-columns: [col1] 25% [col2] 50% [col3] 25%;
+  grid-template-row: repeat(4, 2rem [row-start]);
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "sidebar main main"
+    "footer1 . footer3";
+  grid-column-gap: .25rem;
+  grid-row-gap: .5rem;
+}
+
+.grid div.first {
+  grid-column-start: 1;
+  grid-column-end: col3;
+  grid-row-start: 1;
+  grid-row-end: 2
+}
+
+.grid div.second {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 5
+}
+
+.grid div.third {
+  grid-area: main;
+  background: rgba(63, 81, 181, 0.39);
+}
+
+.grid div.fourth {
+  grid-area: footer1;
+  justify-self: center;
+  align-self: center;
+}
+
+.grid div {
+  padding: .5rem;
+}
+
+.grid div.fifth,
+.grid div.sixth,
+.grid div.seventh,
+.grid div.eighth {
+  display: none;
+}

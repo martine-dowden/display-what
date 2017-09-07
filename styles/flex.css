@@ -1,0 +1,25 @@
+/* display:inline-flex makes the container act as an inline element */
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.flex div {
+  flex-basis: 20%;
+  margin: 0 .5rem;
+  padding: .5rem;
+}
+
+.flex div.first {
+  align-self: center;
+}
+
+.flex div.third {
+  align-self: flex-end;
+}
+
+.flex div.sixth {
+  align-self: stretch;
+}

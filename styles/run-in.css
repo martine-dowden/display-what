@@ -1,0 +1,14 @@
+
+.run-in div.fourth {
+  display: block;
+  padding: 1rem;
+}
+
+.run-in h3 {
+  font-variant: small-caps;
+  font-size: 1.5rem;
+  display: run-in;
+}
+
+.run-in p { display: block; }
+.run-in div { display: none; }

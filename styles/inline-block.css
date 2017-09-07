@@ -1,0 +1,12 @@
+/* Even though the divs have no marking, notice the white space between the divs. */
+
+.inline-block div {
+  
+    display: inline-block;
+    margin: 0;
+  
+    height: 10rem;
+    width: 10rem;
+    padding: 1rem;
+  }
+  

@@ -1,0 +1,15 @@
+.inherit {
+  display: block;
+}
+
+.inherit div {
+  margin-bottom: .5rem;
+  padding: .5rem;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+}
+
+.inherit div.third {
+  display: inherit;
+}

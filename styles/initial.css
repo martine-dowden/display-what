@@ -1,0 +1,15 @@
+.initial {
+  display: block;
+}
+
+.initial div {
+  margin-bottom: .5rem;
+  padding: .5rem;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+}
+
+.initial div.third {
+  display: initial;
+}

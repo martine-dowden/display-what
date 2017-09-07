@@ -1,0 +1,16 @@
+.flow-root .fourth h3,
+.flow-root .sixth h3 {
+  padding: 1rem .5rem;
+  background: #E91E63;
+  float: left;
+}
+
+.flow-root div.fourth { display: flow-root; }
+.flow-root div.sixth { display: block; }
+
+.flow-root div.fourth, 
+.flow-root div.sixth {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+

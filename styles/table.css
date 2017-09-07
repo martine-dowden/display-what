@@ -1,0 +1,25 @@
+/* display:inline-table makes the container act as an inline element */
+
+.table div.first,
+.table div.second,
+.table div.third,
+.table div.fourth {
+  display: table-cell;
+  margin: 1rem;
+}
+
+.table div.fifth,
+.table div.sixth,
+.table div.seventh,
+.table div.eighth {
+  display: table;
+  margin: 1rem;
+}
+
+
+.table div {
+  height: 5rem;
+  width: 5rem;
+  vertical-align: middle;
+  padding: .25rem 1rem;
+}

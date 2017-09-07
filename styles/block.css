@@ -1,0 +1,9 @@
+.block div {
+
+  display: block;
+
+  height: 10rem;
+  width: 10rem;
+  margin: 1rem;
+  padding: 1rem;
+}

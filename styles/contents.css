@@ -1,0 +1,22 @@
+/* Like display none, but only for the container is affected, the children are still displayed. */
+
+.contents div.first { display: block; }
+
+.contents div { display: none; }
+
+.contents div.fourth {
+  display: contents;
+}
+
+.contents div { 
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contents div.first h3,
+.contents div.fourth h3 { 
+  background: #FFF9C4;
+  padding: 1rem;
+  color: #009688;
+  display: block;
+}

@@ -1,0 +1,12 @@
+/* display: none removes the element while visibility hidden only hides the content. The space the element occupies remains. */
+
+.none div.third { display: none; }
+
+.none div.fifth,
+.none div.seventh {
+  visibility: hidden;
+}
+
+.none div {
+  padding: .5rem;
+}
