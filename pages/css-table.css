@@ -1,0 +1,36 @@
+.display-table {
+  display: table;
+  width: 100%;
+  color: rgba(66, 66, 66, 1);
+  border-collapse: collapse;
+}
+
+.display-table .column:first-of-type {
+  background: rgba(255, 245, 157, 0.63);
+}
+
+.header {
+  display: table-header-group;
+  color: #757575;
+  font-size: .875rem;
+  background: rgba(233, 30, 99, 0.25);
+}
+
+.column {
+  display: table-column-group;
+}
+
+.row {
+  display: table-row;
+  border-bottom: solid 1px #BDBDBD;
+}
+
+.cell {
+  display: table-cell;
+  padding: .5rem;
+}
+
+.footer {
+  display: table-footer-group;
+  background: rgba(0, 150, 136, 0.25);
+}

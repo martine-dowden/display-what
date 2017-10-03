@@ -12,6 +12,10 @@
 @import url('./styles/flow-root.css');
 @import url('./styles/contents.css');
 
+/* Pages */
+@import url('./pages/css-table.css');
+@import url('./pages/html-table.css');
+
 /* Basic Setup */
 
 body {
@@ -38,6 +42,9 @@ h3 {
   padding: 0 .05rem 0 0;
   display: inline;
 }
+
+.hidden { display: none; }
+
 h3 svg { height: 1rem; }
 p {
   display: none;
@@ -67,6 +74,12 @@ label {
   display: block;
   margin: 0 0 1rem .5rem;
 }
+
+.radio input { 
+  margin-right: .5rem;
+  line-height: normal;
+}
+
 select {
   color: #263238;
   font-size: 1rem;
@@ -163,6 +176,20 @@ footer {
   section.code {
     flex: 33% 0 1;
     margin: 0 1rem;
+  }
+  main section:last-of-type {
+    display: flex;
+    flex-direction: column;
+  }
+  main section:last-of-type iframe {
+    flex-grow: 1;
+  }
+  #display-table-page section.example,
+  #display-table-page section.code {
+    width: 33%;
+    flex-basis: 33%;
+    flex-grow: 0;
+    overflow-x: auto;
   }
   footer {
     display: flex;

@@ -9,7 +9,6 @@
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,500" rel="stylesheet">
   <link href="../styles.css" type="text/css" rel="stylesheet">
-  <link href="../styles/table-page.css" type="text/css" rel="stylesheet">
   <link rel="icon" type="image/png" href="./favicon.png" />
 
   <meta name="description" content="CSS Display Property Presentation">
@@ -17,7 +16,7 @@
   <meta name="author" content="Martine Dowden">
 </head>
 
-<body>
+<body id="display-table-page">
   <nav>
     <a href="../index.html" title="home" class="home"><img src="../img/home.svg" alt=""></a>
     <a href="./table.html" title="more about display table"><img src="../img/table.svg" alt=""></a>
@@ -25,48 +24,87 @@
 
   <div class="main-content">
     <h1>.css { display: table }</h1>
+    <form>
+        <label class="radio"><input type="radio" name="type" value="css" onchange="toggleTable(value)" checked>{ display: table; }</label>
+      <label class="radio"><input type="radio" name="type" value="html" onchange="toggleTable(value)">&#x3C;table&#x3E;</label>
+    </form>
     <main>
       <section class="example">
-          <h2>Output</h2>
-        <div class="table">
-          
-          <div class="column"></div>
-          <div class="column"></div>
-          <div class="column"></div>
+        <h2>Output</h2>
+        <div class="css">
+          <div class="display-table">
 
-          <div class="header">
-            <div class="row">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+
+            <div class="header">
+              <div class="row">
                 <div class="cell">Row 1, table-header 1</div>
                 <div class="cell">Row 1, table-header 2</div>
                 <div class="cell">Row 1, table-header 3</div>
               </div>
-          </div>
-          
-          <div class="row">
-            <div class="cell">Row 1, Cell 1</div>
-            <div class="cell">Row 1, Cell 2</div>
-            <div class="cell">Row 1, Cell 3</div>
-          </div>
-          <div class="row">
-            <div class="cell">Row 2, Cell 1</div>
-            <div class="cell">Row 2, Cell 2</div>
-            <div class="cell">Row 2, Cell 3</div>
-          </div>
+            </div>
 
-          <div class="footer">
             <div class="row">
+              <div class="cell">Row 1, Cell 1</div>
+              <div class="cell">Row 1, Cell 2</div>
+              <div class="cell">Row 1, Cell 3</div>
+            </div>
+            <div class="row">
+              <div class="cell">Row 2, Cell 1</div>
+              <div class="cell">Row 2, Cell 2</div>
+              <div class="cell">Row 2, Cell 3</div>
+            </div>
+
+            <div class="footer">
+              <div class="row">
                 <div class="cell">Row 1, table-footer 1</div>
                 <div class="cell">Row 1, table-footer 2</div>
                 <div class="cell">Row 1, table-footer 3</div>
               </div>
+            </div>
           </div>
-        
+        </div>
+
+        <div class="html">
+          <table class="display-table">
+            <colgroup></colgroup>
+            <colgroup></colgroup>
+            <colgroup></colgroup>
+            <thead>
+              <tr>
+                <td>Row 1, table-header 1</td>
+                <td>Row 1, table-header 2</td>
+                <td>Row 1, table-header 3</td>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                  <td>Row 1, table-footer 1</td>
+                  <td>Row 1, table-footer 2</td>
+                  <td>Row 1, table-footer 3</td>
+                </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+              </tr>
+              <tr>
+                  <td>Row 2, Cell 1</td>
+                  <td>Row 2, Cell 2</td>
+                  <td>Row 2, Cell 3</td>
+                </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
       <section class="code">
         <h2>HTML</h2>
-<pre><code>
+<pre class="css"><code>
 &#x3C;div class=&#x22;table&#x22;&#x3E;
     
   &#x3C;div class=&#x22;column&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -102,11 +140,45 @@
 
 &#x3C;/div&#x3E;
 </code></pre>
+
+<pre class="html"><code>
+&#x3C;table&#x3E;
+  &#x3C;colgroup&#x3E;&#x3C;/colgroup&#x3E;
+  &#x3C;colgroup&#x3E;&#x3C;/colgroup&#x3E;
+  &#x3C;colgroup&#x3E;&#x3C;/colgroup&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Row 1, table-header 1&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Row 1, table-header 2&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Row 1, table-header 3&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tfoot&#x3E;
+    &#x3C;tr&#x3E;
+        &#x3C;td&#x3E;Row 1, table-footer 1&#x3C;/td&#x3E;
+        &#x3C;td&#x3E;Row 1, table-footer 2&#x3C;/td&#x3E;
+        &#x3C;td&#x3E;Row 1, table-footer 3&#x3C;/td&#x3E;
+      &#x3C;/tr&#x3E;
+  &#x3C;/tfoot&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;Row 1, Cell 1&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Row 1, Cell 2&#x3C;/td&#x3E;
+      &#x3C;td&#x3E;Row 1, Cell 3&#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+        &#x3C;td&#x3E;Row 2, Cell 1&#x3C;/td&#x3E;
+        &#x3C;td&#x3E;Row 2, Cell 2&#x3C;/td&#x3E;
+        &#x3C;td&#x3E;Row 2, Cell 3&#x3C;/td&#x3E;
+      &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;
+</code></pre>
       </section>
 
       <section class="code">
         <h2>CSS</h2>
-        <iframe id="iframe" src="../styles/table-page.css"></iframe>
+        <iframe id="iframe" src=""></iframe>
       </section>
 
     </main>
@@ -115,7 +187,7 @@
     <span>Copyright &copy; M<sub>2</sub>D<sub>2</sub></span>
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
   </footer>
-  
+  <script src="./table.js"></script>
 </body>
 
 </html>

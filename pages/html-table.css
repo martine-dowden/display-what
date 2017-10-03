@@ -1,0 +1,31 @@
+table.display-table {
+  width: 100%;
+  color: rgba(66, 66, 66, 1);
+  border-collapse: collapse;
+}
+
+table.display-table colgroup:first-of-type {
+  background: rgba(255, 245, 157, 0.63);
+}
+
+table.display-table thead {
+  color: #757575;
+  font-size: .875rem;
+  background: rgba(233, 30, 99, 0.25);
+}
+
+table.display-table row {
+  display: table-row;
+  border-bottom: solid 1px #BDBDBD;
+}
+
+table.display-table th, 
+table.display-table td {
+  display: table-cell;
+  padding: .5rem;
+}
+
+table.display-table tfoot {
+  display: table-footer-group;
+  background: rgba(0, 150, 136, 0.25);
+}
