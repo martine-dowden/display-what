@@ -2,7 +2,6 @@
 window.onload = function () {
   
   "use strict";
-  console.log('loaded');
   
   var html = Array.from(document.getElementsByClassName('html'));
   var css = Array.from(document.getElementsByClassName('css'));
@@ -10,8 +9,6 @@ window.onload = function () {
   showHtml();
   
   window.toggleTable = function(val) {
-    console.log(html);
-    console.log(val);
     switch(val) {
       case 'css':
         showCss();

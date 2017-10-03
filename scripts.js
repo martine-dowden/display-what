@@ -2,7 +2,6 @@
 window.onload = function () {
 
   "use strict";
-  console.log('loaded');
   
   var example = document.getElementById('example');
   var iframe = document.getElementById('iframe');
@@ -14,7 +13,6 @@ window.onload = function () {
   iframe.src = 'styles/block.css';
 
   window.changeStyle = function(val) {
-    console.log(val);
     switch(val) {
       case 'block':
         title.innerHTML = "display: block";
