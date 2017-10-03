@@ -86,6 +86,7 @@ section {
 iframe {
   border: none;
   height: 350px;
+  width: 100%;
 }
 
 .first {  background: #E91E63; }
