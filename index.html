@@ -19,7 +19,8 @@
 <body>
   <nav>
     <a href="./index.html" title="home" class="home"><img src="./img/home.svg" alt="home"></a>
-    <a href="./pages/table.html" title="more about display table"><img src="./img/table.svg" alt="table"></a>
+    <a href="./pages/table.html" title="More about display table"><img src="./img/table.svg" alt="table"></a>
+    <a href="./pages/resources.html" title="Resources" class="home"><img src="./img/books.svg" alt="resources"></a>
   </nav>
   <div class="main-content">
     <h1>.css { display: what? }</h1>
@@ -83,31 +84,39 @@
           <h3>Eighth</h3>
           <p>div 8</p>
         </div>
-
-        <div class="experimental">
-          <h3>Support</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Feature</th><th>Chrome</th><th>Edge</th><th>Firefox (Gecko)</th><th>Internet Explorer</th><th>Opera</th><th>Safari (WebKit)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="run-in"><td>run-in</td><td>Removed in 32</td><td>(Yes)</td><td>No Support</td><td>8.0</td><td>7.0</td><td>Removed in 8.0</td></tr>
-              <tr class="flow-root"><td>flow-root</td><td>58</td><td>?</td><td>53.0</td><td>?</td><td>45</td><td>?</td></tr>
-              <tr class="contents"><td>contents</td><td>58 (with experimental feature flag)</td><td>No Support</td><td>37</td><td>No Support</td><td>No Support</td><td>No Support</td></tr>            
-            </tbody>
-          </table>
-        </div>
-
       </section>
-
       <section class="code">
         <h2>Code</h2>
         <iframe title="css file" id="iframe" src="styles/block.css"></iframe>
       </section>
 
     </main>
+    <div class="support" id="support">
+        <h3>Support</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th><th>Chrome</th><th>Edge</th><th>Firefox (Gecko)</th><th>Internet Explorer</th><th>Opera</th><th>Safari (WebKit)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="none"><td>none</td><td>1.0</td><td>(Yes)</td><td>1.0 (1.7 or earlier)</td><td>4.0</td><td>7.0</td><td>1.0 (85)</td></tr>
+            <tr class="inline"><td>inline</td><td>1.0</td><td>(Yes)</td><td>1.0 (1.7 or earlier)</td><td>4.0</td><td>7.0</td><td>1.0 (85)</td></tr>
+            <tr class="block"><td>block</td><td>1.0</td><td>(Yes)</td><td>1.0 (1.7 or earlier)</td><td>4.0</td><td>7.0</td><td>1.0 (85)</td></tr>
+            <tr class="flow-root"><td>flow-root</td><td>58</td><td>?</td><td>53.0</td><td>?</td><td>45</td><td>?</td></tr>
+            <tr class="contents"><td>contents</td><td>58 (with experimental feature flag)</td><td>No Support</td><td>37</td><td>No Support</td><td>No Support</td><td>No Support</td></tr>
+            <tr class="table"><td>table, table-cell, table-column, table-column-group, table-header-group, table-row-group, table-footer-group, table-row, and table-caption</td><td>1.0</td><td>(Yes)</td><td>1.0 (1.7 or earlier)</td><td>8.0</td><td>7.0</td><td>1.0 (85)</td></tr>
+            <tr class="flex"><td>flex</td><td>21.0-webkit<br>29.0</td><td>(Yes)</td><td>18.0<br>(18.0)[1]<br>20.0 (20.0)</td><td>10-ms[8]<br>11</td><td>12.50</td><td>6.1-webkit<br>9.0</td></tr>
+            <tr class="flex"><td>inline-flex</td><td>21.0-webkit<br>29.0</td><td>(Yes)</td><td>18.0<br>(18.0)[1]<br>20.0 (20.0)</td><td>10-ms[8]<br>11</td><td>12.50</td><td>6.1-webkit<br>9.0</td></tr>
+            <tr class="grid"><td>grid</td><td>(Yes)-ms</td><td>45.0</td><td>(45.0)[6]</td><td>10.0-ms</td><td>44</td><td>TP</td></tr>
+            <tr class="grid"><td>inline-grid</td><td>(Yes)-ms</td><td>45.0</td><td>(45.0)[6]</td><td>10.0-ms</td><td>44</td><td>TP</td></tr>
+          </tbody>
+        </table>
+        <p class="flex">[1] To activate flexbox support, for Firefox 18 and 19, the user has to change the about:config preference "layout.css.flexbox.enabled" to true. Multi-line flexbox are supported since Firefox 28.</p>
+        <p class="grid">[6] CSS Grid support is unprefixed in Nightly/Alpha builds and behind pref "layout.css.grid.enabled" in Beta/release builds.</p>
+        <p class="flex">[8] In IE 10, only special prefixed values, -ms-flexbox and -ms-inline-flexbox, are recognized.</p>
+        
+      </div>
   </div>
   <footer>
     <span>Copyright &copy; M<sub>2</sub>D<sub>2</sub></span>

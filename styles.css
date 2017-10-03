@@ -86,12 +86,11 @@ select {
   font-family: 'Raleway', sans-serif;
   border-color: #009688;
 }
-section {
+section, .support {
   box-shadow: 0 1px 2px 0px rgba(0,0,0,.2), 
               0 1px 3px 0px rgba(0,0,0,.1);
   padding: 1rem;
   margin: 1rem .5rem;
-  min-height: 400px;
 }
 
 .example { color: white; }
@@ -111,22 +110,38 @@ iframe {
 .seventh { background: #607D8B; }
 .eighth { background: #02A9F4; }
 
-div.experimental { display: none; }
-div.experimental h3 { color: #607D8B; }
-.run-in .experimental,
-.flow-root .experimental,
-.contents .experimental {
-  margin-top: 3em;
-  display: block; 
+div.support {
+  display: block;
+  width: auto;
+  height: auto;
 }
-.run-in tbody tr.run-in,
+div.support h3 { color: #607D8B; display: block }
+.support { margin-top: 3em; }
+.support table { width: 100%; }
+
 .flow-root tbody tr.flow-root,
-.contents tbody tr.contents { 
+.contents tbody tr.contents,
+.none tbody tr.none,
+.inline tbody tr.inline,
+.block tbody tr.block,
+.table tbody tr.table,
+.flex tbody tr.flex,
+.grid tbody tr.grid { 
   display: table-row;
 }
 
+.support.inherit,
+.support.unset,
+.support.initial {
+  display: none;
+}
 
-.experimental tbody tr { display: none; }
+.support p { display: none }
+.support.flex p.flex { display: block }
+.support.grid p.grid { display: block }
+
+
+.support tbody tr { display: none; }
 .svg-container {
   display: inline-block;
   width: 1.25rem;
@@ -161,6 +176,23 @@ footer {
   color: white;
   font-size: .875rem;
   font-weight: 400;
+}
+
+
+#resources a:link,
+#resources a:visited {
+  color: #009688;
+  text-decoration: none;
+}
+
+#resources a:hover,
+#resources a:focus {
+  color: #E91E63;
+  text-decoration: underline;
+}
+
+#resources li {
+  padding: .5rem 0;
 }
 
 @media (min-width: 750px) {
