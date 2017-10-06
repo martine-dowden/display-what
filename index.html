@@ -26,27 +26,18 @@
     <h1>.css { display: what? }</h1>
     <label> Select a display property value
       <select id="styleSelect" onchange="changeStyle(value)">
-        <optgroup label="Display Outside">
           <option value="block" selected>Block</option>
-          <option value="inline">Inline</option>
-        </optgroup>
-        <optgroup label="Display Inside">
-            <option value="table">Table</option>
-            <option value="flex">Flex</option>
-            <option value="grid">Grid</option>
-        </optgroup>
-        <optgroup label="Display Box">
-          <option value="none">None</option>
-        </optgroup>
-        <optgroup label="Global">
-            <option value="inherit">Inherit</option>
-            <option value="unset">Unset</option>
-            <option value="initial">Initial</option>
-        </optgroup>
-        <optgroup label="Experimental">
-          <option value="flow">Flow-root</option>
           <option value="contents">Contents</option>
-        </optgroup>
+          <option value="flex">Flex</option>
+          <option value="flow">Flow-root</option>
+          <option value="grid">Grid</option>
+          <option value="inherit">Inherit</option>
+          <option value="initial">Initial</option>
+          <option value="inline">Inline</option>
+          <option value="inlineBlock">Inline-Block</option>
+          <option value="none">None</option>
+          <option value="table">Table</option>
+          <option value="unset">Unset</option>
       </select>
     </label>
     <main>
@@ -102,6 +93,7 @@
           <tbody>
             <tr class="none"><td>none</td><td>1.0</td><td>(Yes)</td><td>1.0 (1.7 or earlier)</td><td>4.0</td><td>7.0</td><td>1.0 (85)</td></tr>
             <tr class="inline"><td>inline</td><td>1.0</td><td>(Yes)</td><td>1.0 (1.7 or earlier)</td><td>4.0</td><td>7.0</td><td>1.0 (85)</td></tr>
+            <tr class="inline-block"><td>inline-block</td><td>1.0</td><td>(Yes)</td><td>3.0 (1.9)</td><td>5.5[4]</td><td>7.0</td><td>1.0 (85)</td></tr>
             <tr class="block"><td>block</td><td>1.0</td><td>(Yes)</td><td>1.0 (1.7 or earlier)</td><td>4.0</td><td>7.0</td><td>1.0 (85)</td></tr>
             <tr class="flow-root"><td>flow-root</td><td>58</td><td>?</td><td>53.0</td><td>?</td><td>45</td><td>?</td></tr>
             <tr class="contents"><td>contents</td><td>58 (with experimental feature flag)</td><td>No Support</td><td>37</td><td>No Support</td><td>No Support</td><td>No Support</td></tr>
@@ -110,9 +102,14 @@
             <tr class="flex"><td>inline-flex</td><td>21.0-webkit<br>29.0</td><td>(Yes)</td><td>18.0<br>(18.0)[1]<br>20.0 (20.0)</td><td>10-ms[8]<br>11</td><td>12.50</td><td>6.1-webkit<br>9.0</td></tr>
             <tr class="grid"><td>grid</td><td>(Yes)-ms</td><td>45.0</td><td>(45.0)[6]</td><td>10.0-ms</td><td>44</td><td>TP</td></tr>
             <tr class="grid"><td>inline-grid</td><td>(Yes)-ms</td><td>45.0</td><td>(45.0)[6]</td><td>10.0-ms</td><td>44</td><td>TP</td></tr>
+            <tr class="inherit"><td>inherit</td><td>1.0</td><td></td><td>1.0(1.7 or earlier)</td><td>8.0</td><td>4.0</td><td>1.0(85)</td></tr>
+            <tr class="unset"><td>unser</td><td>41</td><td></td><td>27 (27)</td><td>Edge build 10565+</td><td>28</td><td>9.1</td></tr>
+            <tr class="initial"><td>initial</td><td>1.0</td><td></td><td>3.5 (1.9.1) -moz[1]<br>19.0 (19.0)</td><td>No support</td><td>15.0</td><td>1.2</td></tr>
+
           </tbody>
         </table>
         <p class="flex">[1] To activate flexbox support, for Firefox 18 and 19, the user has to change the about:config preference "layout.css.flexbox.enabled" to true. Multi-line flexbox are supported since Firefox 28.</p>
+        <p class="initial">[1] From Firefox 1.0 onward, increasing support for -moz-initial was added in each version, culminating with the support for quotes in Firefox 3.5 (Gecko 1.9.1). The last addition was support for the non-standard -moz-border-*-colors in Firefox 3.6 (Gecko 1.9.2). Support for the prefixed -moz-initial keyword has been removed as of Firefox 24 in favor of the unprefixed initial keyword.</p>
         <p class="grid">[6] CSS Grid support is unprefixed in Nightly/Alpha builds and behind pref "layout.css.grid.enabled" in Beta/release builds.</p>
         <p class="flex">[8] In IE 10, only special prefixed values, -ms-flexbox and -ms-inline-flexbox, are recognized.</p>
         

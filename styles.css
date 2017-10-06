@@ -126,19 +126,18 @@ div.support h3 { color: #607D8B; display: block }
 .block tbody tr.block,
 .table tbody tr.table,
 .flex tbody tr.flex,
-.grid tbody tr.grid { 
+.grid tbody tr.grid,
+.inline-block tbody tr.inline-block,
+.inherit tbody tr.inherit,
+.unset tbody tr.unset,
+.initial tbody tr.initial {
   display: table-row;
 }
 
-.support.inherit,
-.support.unset,
-.support.initial {
-  display: none;
-}
-
 .support p { display: none }
-.support.flex p.flex { display: block }
-.support.grid p.grid { display: block }
+.support.flex p.flex,
+.support.grid p.grid,
+.support.initial p.initial {display: block }
 
 
 .support tbody tr { display: none; }
